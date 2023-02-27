@@ -41,84 +41,7 @@ public class Frame extends JFrame implements ActionListener{
 
 
 
-	public static void mainDropAdd(){
-
-		for(int num=0; num<mainDropContents.length;num++){
-			mainPicker.addItem(mainDropContents[num]);
-		}
-	}
-
-	public static void deleteElements(){
-		unit1.removeAllItems();
-		unit2.removeAllItems();
-
-	}
-
-	public static void dataElements(){
-		for(int num=0; num<dataComp.length;num++){
-			unit1.addItem(dataComp[num]);
-			unit2.addItem(dataComp[num]);
-
-
-		}
-	}
-
-	public static void lengthElements(){
-		for(int num=0; num<lengthComp.length;num++){
-			unit1.addItem(lengthComp[num]);
-			unit2.addItem(lengthComp[num]);
-
-
-		}
-	}
-
-	public static void areaElements(){
-		for(int num=0; num<areaComp.length;num++){
-			unit1.addItem(areaComp[num]);
-			unit2.addItem(areaComp[num]);
-
-
-		}
-	}
-
-
-	public static void volumeElements(){
-		for(int num=0; num<volumeComp.length;num++){
-			unit1.addItem(volumeComp[num]);
-			unit2.addItem(volumeComp[num]);
-
-
-		}
-	}
-
-	public static void tempElements(){
-		for(int num=0; num<tempComp.length;num++){
-			unit1.addItem(tempComp[num]);
-			unit2.addItem(tempComp[num]);
-
-
-		}
-	}
-
-	public static void timeElements(){
-		for(int num=0; num<timeComp.length;num++){
-			unit1.addItem(timeComp[num]);
-			unit2.addItem(timeComp[num]);
-
-
-		}
-	}
-
-
-	public static void massElements(){
-		for(int num=0; num<massComp.length;num++){
-			unit1.addItem(massComp[num]);
-			unit2.addItem(massComp[num]);
-
-
-		}
-	}
-
+	
 
 
 
@@ -203,6 +126,85 @@ public class Frame extends JFrame implements ActionListener{
 
 	}
 	*/
+
+	public static void mainDropAdd(){
+
+		for(int num=0; num<mainDropContents.length;num++){
+			mainPicker.addItem(mainDropContents[num]);
+		}
+	}
+
+	public static void deleteElements(){
+		unit1.removeAllItems();
+		unit2.removeAllItems();
+
+	}
+
+	public static void dataElements(){
+		for(int num=0; num<dataComp.length;num++){
+			unit1.addItem(dataComp[num]);
+			unit2.addItem(dataComp[num]);
+
+
+		}
+	}
+
+	public static void lengthElements(){
+		for(int num=0; num<lengthComp.length;num++){
+			unit1.addItem(lengthComp[num]);
+			unit2.addItem(lengthComp[num]);
+
+
+		}
+	}
+
+	public static void areaElements(){
+		for(int num=0; num<areaComp.length;num++){
+			unit1.addItem(areaComp[num]);
+			unit2.addItem(areaComp[num]);
+
+
+		}
+	}
+
+
+	public static void volumeElements(){
+		for(int num=0; num<volumeComp.length;num++){
+			unit1.addItem(volumeComp[num]);
+			unit2.addItem(volumeComp[num]);
+
+
+		}
+	}
+
+	public static void tempElements(){
+		for(int num=0; num<tempComp.length;num++){
+			unit1.addItem(tempComp[num]);
+			unit2.addItem(tempComp[num]);
+
+
+		}
+	}
+
+	public static void timeElements(){
+		for(int num=0; num<timeComp.length;num++){
+			unit1.addItem(timeComp[num]);
+			unit2.addItem(timeComp[num]);
+
+
+		}
+	}
+
+
+	public static void massElements(){
+		for(int num=0; num<massComp.length;num++){
+			unit1.addItem(massComp[num]);
+			unit2.addItem(massComp[num]);
+
+
+		}
+	}
+
 
 
 	@Override
