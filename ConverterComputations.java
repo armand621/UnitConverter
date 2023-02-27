@@ -1436,6 +1436,669 @@ public class ConverterComputations{
 
 		}
 
+		else if (Frame.mainPicker.getSelectedItem().toString().equals("Area")) {
+			
+			if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Square Kilometer"));
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.01;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Hectare"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.0001;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Are"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.000001;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square meter"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/Math.pow(0.246733,10);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square yard"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==5) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/Math.pow(0.198062836,10);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square foot"));
+
+				}
+			
+			//second computation
+			
+			if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/100;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square Kilometer"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Hectare"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.01;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Are"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.0001;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square meter"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.000083612736;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square yard"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==5) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.000009290304;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square foot"));
+
+				}
+			
+			//third
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/10000;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square Kilometer"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/100;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Hectare"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Are"));
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.01;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square meter"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.0083612736;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square yard"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==5) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.0009290304;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square foot"));
+
+				}
+			
+			
+			//fourth
+			else if(Frame.unit1.getSelectedIndex() == 3 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/1000000;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square Kilometer"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 3 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/10000;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Hectare"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 3 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/100;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Are"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 3 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Square Meter"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 3 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.83612736;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square yard"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 3 && Frame.unit2.getSelectedIndex()==5) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.09290304;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square foot"));
+
+				}
+			
+			
+			
+			//fifth
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/1195990.05;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square Kilometer"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/11959.9005;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Hectare"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/119.599005;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Are"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/1.19599005;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square Meter"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Square Yard"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==5) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.111111111;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square foot"));
+
+				}
+			
+			
+			//sixth
+			
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/10763910.4;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square Kilometer"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/107639.104;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Hectare"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/1076.39104;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Are"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/10.7639104;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square Meter"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/9;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Square Yard"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==5) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Square Foot"));
+				
+
+				}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		//another condition
+		
+		else if (Frame.mainPicker.getSelectedItem().toString().equals("Volume")) {
+			if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Milliliter"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/10;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Centiliter"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/100;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Deciliter"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/1000;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Liter"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/100000;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Hectoliter"));
+
+				}
+			
+			
+			//second
+			if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.1;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Milliliter"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Centiliter"));
+
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/10;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Deciliter"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/100;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Liter"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/10000;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Hectoliter"));
+
+				}
+			
+			//third
+			if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.01;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Milliliter"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.1;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Centiliter"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Deciliter"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/10;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Liter"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/1000;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Hectoliter"));
+
+				}
+			
+			//fourth
+			if(Frame.unit1.getSelectedIndex() == 3 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.001;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Milliliter"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 3 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.01;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Centiliter"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 3 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.1;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Deciliter"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 3 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Liter"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 3 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/100;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Hectoliter"));
+
+				}
+			
+			//fifth
+			if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.00001;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Milliliter"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.0001;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Centiliter"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.001;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Deciliter"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.01;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Liter"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Hectoliter"));
+
+				}
+			
+			
+		
+			
+		}
+		
+		
+		
+		
+		
+		
+			//another condition
+
+		else if (Frame.mainPicker.getSelectedItem().toString().equals("Temperature")) {
+			
+			
+			if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Celsius"));
+			}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a*(1.8)+32;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Farenheit"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a+273.15;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Kelvin"));
+
+				}
+			
+			//second
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = (a-32)*0.5556;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Celsius"));
+
+				
+			}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Farenheit"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = ((a-32)*5)/9+273.15;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Kelvin"));
+
+				}
+			
+			//third
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a-273.15;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Celsius"));
+
+				
+			}
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = 1.8*(a-273) + 32;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Farenheit"));
+
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 2 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Kelvin"));
+
+
+				}
+			
+			
+		}
+		
+		
+		//another condition
+		
+		else if (Frame.mainPicker.getSelectedItem().toString().equals("Time")) {
+
+			if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Year"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.0191780822;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Week"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(1/365.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum) +" Day"));
+				System.out.println(sum);
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(1/8760.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Hour"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(1/525600.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Minute"));
+
+				}
+
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==5) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(1/31536000.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Second"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 0 && Frame.unit2.getSelectedIndex()==6) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(1/31536000000.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Millisecond"));
+
+				}
+
+			//second condition with undone computations
+				else 1f(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Year"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.0191780822;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Week"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(1/365.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum) +" Day"));
+				System.out.println(sum);
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(1/8760.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Hour"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(1/525600.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Minute"));
+
+				}
+
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==5) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(1/31536000.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Second"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 1 && Frame.unit2.getSelectedIndex()==6) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(1/31536000000.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Millisecond"));
+
+				}
+
+			
+		
+		}
+
+		//Another Condition
+
 
 
 
