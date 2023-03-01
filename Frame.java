@@ -22,7 +22,7 @@ public class Frame extends JFrame implements ActionListener{
 	JLabel mainTitle;
 	static JComboBox mainPicker, unit1, unit2;
 	static JTextField fromValue, toValue;
-	static JButton button;
+	static JButton button,clearButton;
 
 	static String mainDropContents[] = {"Data", "Length", "Area", "Volume", "Temperature", "Time", "Mass"};
 	
@@ -56,6 +56,7 @@ public class Frame extends JFrame implements ActionListener{
 		toValue = new JTextField();
 
 		button = new JButton();
+		clearButton = new JButton();
 
 		//toolkits 
 		Toolkit toolkit = this.getToolkit();
@@ -104,6 +105,13 @@ public class Frame extends JFrame implements ActionListener{
 
 		button.setBounds(100,300,150,35);
 		button.addActionListener(this);
+		button.setText("Compute");
+		button.setFocusable(false);
+
+		clearButton.setBounds(300,300,150,35);
+		clearButton.addActionListener(this);
+		clearButton.setText("Clear");
+		clearButton.setFocusable(false);
 
 
 		this.add(mainTitle);
@@ -113,6 +121,7 @@ public class Frame extends JFrame implements ActionListener{
 		this.add(fromValue);
 		this.add(toValue);
 		this.add(button);
+		this.add(clearButton);
 		this.setVisible(true);
 
 	}
@@ -206,6 +215,13 @@ public class Frame extends JFrame implements ActionListener{
 	}
 
 
+	public static void clearButton(){
+		toValue.setText("");
+		fromValue.setText("");
+
+	}
+
+
 
 	@Override
 	public void actionPerformed(ActionEvent e){
@@ -272,6 +288,12 @@ public class Frame extends JFrame implements ActionListener{
 
 			ConverterComputations.dataOperation();
 			System.out.println(unit1.getSelectedIndex());
+		}
+
+		else{
+			Frame.clearButton();
+
+
 		}
 
 	}

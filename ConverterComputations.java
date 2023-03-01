@@ -2580,7 +2580,239 @@ public class ConverterComputations{
 				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Carat"));
 				}
 
-		//fifth condition to be continued 
+		//fifth condition 
+
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/Math.pow(10,12);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum) +" Tonne"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(100000.0/0.0001);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Kilogram"));
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(100.0/0.0001);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Gram"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/1000;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Milligram"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Microgram"));
+				
+				}
+
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==5) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/453592370;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Pound"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==6) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(28.3495231/0.000001);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Ounce"));
+
+				}
+
+			else if(Frame.unit1.getSelectedIndex() == 4 && Frame.unit2.getSelectedIndex()==7) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/200000;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Carat"));
+				}
+
+			//sixth condition
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/2204.62262;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum) +" Tonne"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/2.20462262;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Kilogram"));
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.00220462262;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Gram"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(2.20462262/1000000.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Milligram"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(0.198416036/90000000.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Pound"));
+				
+				}
+
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==5) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Microgram"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==6) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(0.0625);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Ounce"));
+
+				}
+
+			else if(Frame.unit1.getSelectedIndex() == 5 && Frame.unit2.getSelectedIndex()==7) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(4.40924524/10000);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Carat"));
+				}
+
+
+			//seventh condition
+
+			else if(Frame.unit1.getSelectedIndex() == 6 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/35273.9619;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum) +" Tonne"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 6 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/35.2739619;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Kilogram"));
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 6 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(3.52739619/100.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Gram"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 6 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(3.52739619/100000.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Milligram"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 6 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(3.52739619/100000000.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Microgram"));
+				
+				
+				}
+
+			else if(Frame.unit1.getSelectedIndex() == 6 && Frame.unit2.getSelectedIndex()==5) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/16;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Pound"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 6 && Frame.unit2.getSelectedIndex()==6) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Ounce"));
+
+				
+
+				}
+
+			else if(Frame.unit1.getSelectedIndex() == 6 && Frame.unit2.getSelectedIndex()==7) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(70.5479239/10000.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Carat"));
+				}
+
+
+			//eight condition
+			else if(Frame.unit1.getSelectedIndex() == 7 && Frame.unit2.getSelectedIndex()==0) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/5000000;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum) +" Tonne"));
+				
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 7 && Frame.unit2.getSelectedIndex()==1) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/5000;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Kilogram"));
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 7 && Frame.unit2.getSelectedIndex()==2) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/5;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Gram"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 7 && Frame.unit2.getSelectedIndex()==3) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/0.005;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Milligram"));
+				
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 7 && Frame.unit2.getSelectedIndex()==4) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/(.05/10000.0);
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Microgram"));
+				
+				
+				}
+
+			else if(Frame.unit1.getSelectedIndex() == 7 && Frame.unit2.getSelectedIndex()==5) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/2267.96185;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Pound"));
+
+				}
+			
+			else if(Frame.unit1.getSelectedIndex() == 7 && Frame.unit2.getSelectedIndex()==6) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Double sum = a/141.747616;
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum)+" Ounce"));
+
+				}
+
+			else if(Frame.unit1.getSelectedIndex() == 7 && Frame.unit2.getSelectedIndex()==7) {
+				Double a = Double.parseDouble(Frame.fromValue.getText());
+				Frame.toValue.setText(String.valueOf(String.format("%,.8f",a)+" Carat"));
+
+				}
+
 
 
 
@@ -2588,7 +2820,7 @@ public class ConverterComputations{
 
 		}
 
-
+//End of computation
 
 
 
