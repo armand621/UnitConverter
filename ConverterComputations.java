@@ -1,3 +1,18 @@
+/*-------------------------------------------------------
+|                    UNIT CONVERTER GUI                 |
+|                                                       |
+|         Programmer: Armand Robin I. Tangonan          |
+|                        BSIT 1A                        |
+|                                                       |
+|  Note: Do not remove\modify the static method for     |
+|        JTextField and JLabel for the program to       |
+|        run properly without any error(s)/problem(s)   |
+|                                                       |
+|                                                       |
+-------------------------------------------------------*/
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -6,23 +21,34 @@ import java.awt.event.ActionListener;
 
 public class ConverterComputations{
 
-
+	
 	public static void dataOperation(){
 
-		try{
-			Double handler = Double.parseDouble(Frame.fromValue.getText());
-			
-			
-			
+		//This section is for catching invalid or empty inputs
+		
+		int forExample = 1;
+		int forBuff = 2;
 
-		}
-		catch(Exception e){
-			JOptionPane.showMessageDialog(null, "Incorrect");
+		if(forExample < forBuff){
 
+			String value = Frame.fromValue.getText();
+			Pattern pattern = Pattern.compile("[A-Z, a-z, ^&$()*@!#%]");
+			Matcher errorMatcher = pattern.matcher(Frame.fromValue.getText());
+
+			if(value.equals("")){
+				JOptionPane.showMessageDialog(null, "It seems like you did not enter any number in the input field. \nPlease try again and enter a number.", "No Input", JOptionPane.ERROR_MESSAGE);
+
+			}
+
+			else if(errorMatcher.find()){
+			JOptionPane.showMessageDialog(null, "It seems like you have entered an invalid input. \nPlease try again and enter numbers only.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
+
+			}
 		}
 		
 
-		
+
+		//This section is for conversion process
 
 		if(Frame.mainPicker.getSelectedItem().toString().equals("Data")){
 
@@ -2010,7 +2036,7 @@ public class ConverterComputations{
 				Double a = Double.parseDouble(Frame.fromValue.getText());
 				Double sum = a/(1/365.0);
 				Frame.toValue.setText(String.valueOf(String.format("%,.8f",sum) +" Day"));
-				System.out.println(sum);
+				
 				
 				}
 			

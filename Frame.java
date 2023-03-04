@@ -19,11 +19,14 @@ import java.awt.event.ActionListener;
 
 public class Frame extends JFrame implements ActionListener{
 
+
 	JLabel mainTitle, forBackground, frTxt, toTxt, frBoxVal, toBoxVal;
 	static JComboBox mainPicker, unit1, unit2;
 	static JTextField fromValue, toValue;
 	static JButton button,clearButton;
-	static ImageIcon background;
+	static ImageIcon background, logo;
+
+	//This section is for array contents
 
 	static String mainDropContents[] = {"Data", "Length", "Area", "Volume", "Temperature", "Time", "Mass"};
 	
@@ -37,16 +40,7 @@ public class Frame extends JFrame implements ActionListener{
 
 
 
-
-
-
-
-
-	
-
-
-
-
+	//This section is for the main frame
 	Frame(){
 
 		mainTitle = new JLabel();
@@ -66,6 +60,7 @@ public class Frame extends JFrame implements ActionListener{
 		clearButton = new JButton();
 
 		background = new ImageIcon("background.png");
+		logo = new ImageIcon("logo.png");
 
 		//toolkits 
 		Toolkit toolkit = this.getToolkit();
@@ -75,20 +70,20 @@ public class Frame extends JFrame implements ActionListener{
 		this.setSize(800,500);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(false);
+		this.setIconImage(logo.getImage());
 		this.setLocation((size.width/2 - (this.getWidth()/2)), (size.height/2 - (this.getHeight()/2)));
 		this.setLayout(null);
-		//this.getContentPane().setBackground(new Color(0xFFFFFF));
-
 		
+		
+		//for maintitle
 		mainTitle.setText("Select Conversion:");
 		mainTitle.setBounds(400,48,300,30);
 		mainTitle.setForeground(new Color(0x125488));
 		mainTitle.setFont(new Font("Comic Sans MS",Font.BOLD,25));
 		mainTitle.setHorizontalAlignment(JLabel.CENTER);
-		//mainTitle.setBackground(new Color(0x3C3CC4));
-		//mainTitle.setOpaque(true);
 		
-
+		
+		//for mainpicker
 		mainPicker.setBounds(450,100,190,35);
 		mainPicker.setFont(new Font("Arial", Font.BOLD, 18));
 		mainPicker.setForeground(new Color(0x02C041C));
@@ -99,7 +94,7 @@ public class Frame extends JFrame implements ActionListener{
 		Frame.mainDropAdd();
 
 
-		
+		//for the background
 		forBackground.setBounds(0, 0, 800, 500);
 		forBackground.setOpaque(true);
 		forBackground.setIcon(background);
@@ -121,17 +116,16 @@ public class Frame extends JFrame implements ActionListener{
 		
 		
 
-		
+		//for the unit1
 		unit1.setBounds(353,180,180,40);
 		unit1.setFocusable(false);
 		unit1.setFont(new Font("Arial",Font.BOLD,15));
 		unit1.setForeground(new Color(0x02C041C));
 		unit1.setFocusable(false);
-
 		unit1.setOpaque(true);
 		unit1.setBackground(new Color(0xCDEFF5));
 
-
+		//for the unit2
 		unit2.setBounds(570,180,180,40);
 		unit2.setFocusable(false);
 		unit2.setFont(new Font("Arial",Font.BOLD,15));
@@ -155,7 +149,7 @@ public class Frame extends JFrame implements ActionListener{
 		toBoxVal.setFont(new Font("Comic Sans MS",Font.BOLD,16));
 		
 
-
+		//for fromvalue
 		fromValue.setBounds(353,270,180,40);
 		fromValue.setFont(new Font("Comic Sans MS",Font.BOLD,15));
 		fromValue.setForeground(new Color(0x02C041C));
@@ -164,6 +158,7 @@ public class Frame extends JFrame implements ActionListener{
 		fromValue.setBorder(BorderFactory.createMatteBorder(0,0,4,0,new Color(0x2A93D5)));
 		
 
+		//for tovalue
 		toValue.setBounds(570,270,180,40);
 		toValue.setEditable(false);
 		toValue.setFont(new Font("Comic Sans MS",Font.BOLD,15));
@@ -173,7 +168,7 @@ public class Frame extends JFrame implements ActionListener{
 		toValue.setBorder(BorderFactory.createMatteBorder(0,0,4,0,new Color(0x2A93D5)));
 	
 		
-
+		//for the compute button
 		button.setBounds(353,350,180,40);
 		button.addActionListener(this);
 		button.setText("Compute");
@@ -184,6 +179,7 @@ public class Frame extends JFrame implements ActionListener{
 		button.setBackground(new Color(0x125488));
 		button.setForeground(Color.WHITE);
 
+		//for the clear button
 		clearButton.setBounds(570,350,180,40);
 		clearButton.addActionListener(this);
 		clearButton.setText("Clear");
@@ -195,6 +191,7 @@ public class Frame extends JFrame implements ActionListener{
 		clearButton.setForeground(Color.WHITE);
 
 
+		//for adding methods to the jframe
 		this.add(mainTitle);
 		this.add(mainPicker);
 		this.add(frTxt);
@@ -215,14 +212,9 @@ public class Frame extends JFrame implements ActionListener{
 
 
 
-	/*public static void removeTxtFldVal(){
+	//initializing static methods 
 
-		fromValue.setText("");
-		toValue.setText("");
-
-	}
-	*/
-
+	//first method
 	public static void mainDropAdd(){
 
 		for(int num=0; num<mainDropContents.length;num++){
@@ -230,12 +222,16 @@ public class Frame extends JFrame implements ActionListener{
 		}
 	}
 
+
+	//second method
 	public static void deleteElements(){
 		unit1.removeAllItems();
 		unit2.removeAllItems();
 
 	}
 
+
+	//third method
 	public static void dataElements(){
 		for(int num=0; num<dataComp.length;num++){
 			unit1.addItem(dataComp[num]);
@@ -245,6 +241,7 @@ public class Frame extends JFrame implements ActionListener{
 		}
 	}
 
+	//fourth method
 	public static void lengthElements(){
 		for(int num=0; num<lengthComp.length;num++){
 			unit1.addItem(lengthComp[num]);
@@ -254,6 +251,7 @@ public class Frame extends JFrame implements ActionListener{
 		}
 	}
 
+	//fifth method
 	public static void areaElements(){
 		for(int num=0; num<areaComp.length;num++){
 			unit1.addItem(areaComp[num]);
@@ -264,6 +262,7 @@ public class Frame extends JFrame implements ActionListener{
 	}
 
 
+	//sixth method
 	public static void volumeElements(){
 		for(int num=0; num<volumeComp.length;num++){
 			unit1.addItem(volumeComp[num]);
@@ -273,6 +272,8 @@ public class Frame extends JFrame implements ActionListener{
 		}
 	}
 
+
+	//seventh method
 	public static void tempElements(){
 		for(int num=0; num<tempComp.length;num++){
 			unit1.addItem(tempComp[num]);
@@ -282,6 +283,8 @@ public class Frame extends JFrame implements ActionListener{
 		}
 	}
 
+
+	//eighth method
 	public static void timeElements(){
 		for(int num=0; num<timeComp.length;num++){
 			unit1.addItem(timeComp[num]);
@@ -292,6 +295,8 @@ public class Frame extends JFrame implements ActionListener{
 	}
 
 
+
+	//ninth method
 	public static void massElements(){
 		for(int num=0; num<massComp.length;num++){
 			unit1.addItem(massComp[num]);
@@ -302,6 +307,8 @@ public class Frame extends JFrame implements ActionListener{
 	}
 
 
+
+	//tenth method
 	public static void clearButton(){
 		toValue.setText("");
 		fromValue.setText("");
@@ -310,10 +317,15 @@ public class Frame extends JFrame implements ActionListener{
 
 
 
+
+
+	//This section is for the action listener
 	@Override
 	public void actionPerformed(ActionEvent e){
+
+		//this section is for the main jcombobox 
 		if(e.getSource()== mainPicker){
-			System.out.println(mainPicker.getSelectedItem());
+			
 
 			switch (mainPicker.getSelectedItem().toString()){
 				
@@ -357,36 +369,31 @@ public class Frame extends JFrame implements ActionListener{
 					Frame.massElements();
 					break;
 
-
-
 			}
 
 			
 			
 		}
 
-		/*else if (e.getSource() == unit1.getSelectedItem() || e.getSource() == unit2.getSelectedItem()){
-			Frame.removeTxtFldVal();
-		}
 
-		*/
-
+	
+		//this section is for the button
 		else if (e.getSource() == button){
 
-			ConverterComputations.dataOperation();
-			System.out.println(unit1.getSelectedIndex());
+	
+		ConverterComputations.dataOperation();
+	
 		}
-
+		
+		//this section is for the clear button
 		else{
 			Frame.clearButton();
-
-
 		}
 
 	}
 
-
-
-
-
 }
+
+
+
+
